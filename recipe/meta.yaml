@@ -27,6 +27,7 @@ requirements:
     - scikit-image
     - vispy
     - dask
+    - cachey
     - zarr
     - fsspec
     - imageio
