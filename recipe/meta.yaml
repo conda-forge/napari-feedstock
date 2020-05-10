@@ -42,6 +42,8 @@ requirements:
     - PySide2
     - wrapt
     - numpydoc
+    - napari-plugin-engine
+    - napari-svg
 
 test:
   requires:
