@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - napari = napari.__main__:main
@@ -32,7 +32,7 @@ requirements:
     - fsspec
     - imageio
     - ipykernel
-    - jupyter_client <6.0.0
+    - jupyter_client
     - qtpy
     - qtconsole
     - IPython
@@ -44,6 +44,7 @@ requirements:
     - numpydoc
     - napari-plugin-engine
     - napari-svg
+    - tifffile
 
 test:
   requires:
