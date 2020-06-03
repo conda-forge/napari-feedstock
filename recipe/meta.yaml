@@ -17,12 +17,12 @@ build:
     - napari = napari.__main__:main
 
 requirements:
-  host:
-    - python >=3.6
-    - pip
   build:
     - pep517
     - setuptools_scm
+  host:
+    - python >=3.6
+    - pip
   run:
     - python >=3.6
     - numpy
