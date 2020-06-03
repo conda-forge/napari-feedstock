@@ -20,6 +20,9 @@ requirements:
   host:
     - python >=3.6
     - pip
+  build:
+    - pep517
+    - setuptools_scm
   run:
     - python >=3.6
     - numpy
