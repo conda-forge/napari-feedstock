@@ -26,7 +26,6 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - numpy
     - scipy >=1.2.0
     - scikit-image
     - vispy >=0.6.4
@@ -43,7 +42,7 @@ requirements:
     - qtconsole >=4.5.1
     - IPython
     - backcall
-    - Pillow !=7.1.0,!=7.1.1  # not a direct dependency, but 7.1.0 and 7.1.1 broke imageio
+    - pillow
     - pluggy
     - psutil >=5.0
     - pyopengl >=3.1.0
