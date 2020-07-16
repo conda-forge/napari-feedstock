@@ -56,7 +56,6 @@ requirements:
     - tifffile >=2020.2.16
     - toolz >=0.10.0
 
-
 test:
   requires:
     - fsspec
