@@ -46,7 +46,7 @@ requirements:
     - pluggy
     - psutil >=5.0
     - pyopengl >=3.1.0
-    - pyside2
+    - pyqt
     - pyyaml >=5.1
     - wrapt >=1.11.1
     - numpy >=1.10.0
@@ -55,7 +55,6 @@ requirements:
     - napari-svg >=0.1.3
     - tifffile >=2020.2.16
     - toolz >=0.10.0
-
 
 test:
   requires:
@@ -72,8 +71,8 @@ test:
   imports:
     - napari
   commands:
-    - setx QT_API "pyside2"  # [win]
-    - export QT_API=pyside2  # [unix]
+    - setx QT_API "pyqt5"  # [win]
+    - export QT_API=pyqt5  # [unix]
     - which napari
     #- DISPLAY=localhost:1.0 xvfb-run -a bash -c 'napari --info'
     #- pytest --pyargs napari
