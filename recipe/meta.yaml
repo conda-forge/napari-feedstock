@@ -43,7 +43,7 @@ requirements:
     - backcall
     - pluggy
     - PyOpenGl
-    - PySide2
+    - pyqt
     - wrapt
     - numpydoc
     - napari-plugin-engine
@@ -63,8 +63,8 @@ test:
   imports:
     - napari
   commands:
-    - setx QT_API "pyside2"  # [win]
-    - export QT_API=pyside2  # [unix]
+    - setx QT_API "pyqt5"  # [win]
+    - export QT_API=pyqt5  # [unix]
     - which napari
     #- DISPLAY=localhost:1.0 xvfb-run -a bash -c 'napari --info'
     #- pytest --pyargs napari
