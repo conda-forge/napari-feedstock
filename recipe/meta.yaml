@@ -10,8 +10,8 @@ source:
   sha256: 77acd0bea1e0fbfde5896c94108d03bfc932cb8de527f4b7ea14699434f83611
 
 build:
-  noarch: python
-  number: 1
+  skip: true  # [py<36]
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - napari = napari.__main__:main
@@ -21,12 +21,12 @@ requirements:
     - pep517
     - setuptools_scm
   host:
-    - python >=3.6
+    - python
     - pip
     - setuptools_scm
   run:
     - appdirs >=1.4.4
-    - python >=3.6
+    - python
     - scipy >=1.2.0
     - scikit-image
     - vispy >=0.6.4
@@ -35,7 +35,7 @@ requirements:
     - zarr
     - fsspec
     - imageio >=2.5.0
-    - importlib-metadata >=1.5.0
+    - importlib-metadata >=1.5.0  # [py<38]
     - ipykernel >=5.1.1
     - ipython >=7.7.0
     - jupyter_client
