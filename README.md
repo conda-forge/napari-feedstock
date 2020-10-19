@@ -127,3 +127,4 @@ Feedstock Maintainers
 * [@royerloic](https://github.com/royerloic/)
 * [@sofroniewn](https://github.com/sofroniewn/)
 * [@tlambert03](https://github.com/tlambert03/)
+
