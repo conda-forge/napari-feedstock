@@ -5,9 +5,13 @@ Home: http://napari.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/master/LICENSE.txt)
 
 Summary: a fast n-dimensional image viewer in Python
+
+Development: https://github.com/napari/napari
+
+Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
 
