@@ -85,9 +85,7 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: a fast n-dimensional image viewer in Python
-
-  description: |
-    a fast n-dimensional image viewer in Python
+  description: a fast n-dimensional image viewer in Python
   doc_url: http://napari.org
   dev_url: https://github.com/napari/napari
 
