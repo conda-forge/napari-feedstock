@@ -52,7 +52,6 @@ requirements:
     - typing_extensions
     - vispy >=0.6.4
     - wrapt >=1.11.1
-
     # additional dependencies for convenience in conda-forge
     - fsspec
     - pyqt
