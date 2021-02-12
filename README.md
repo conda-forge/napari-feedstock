@@ -15,7 +15,6 @@ Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
 
-
 Current build status
 ====================
 
