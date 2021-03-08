@@ -1,5 +1,5 @@
 {% set name = "napari" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1015365bf34ba63cfc0277174ae3d3a71b9092812a5b06c797ecaf3b9eb0c792
+  sha256: 92365645cdd48347348022e525e528e972a718f6b881a3b6753d380a74d8ed51
 
 build:
   noarch: python
@@ -41,7 +41,7 @@ requirements:
     - numpydoc >=0.9.2
     - pillow
     - psutil >=5.0
-    - pydantic >=1.7.3
+    - pydantic >=1.7.3,<1.8.0
     - pyopengl >=3.1.0
     - pyyaml >=5.1
     - qtpy >=1.7.0
