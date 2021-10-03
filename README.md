@@ -19,11 +19,37 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=master">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -34,6 +60,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-napari-green.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-napari--menu-green.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) |
 
 Installing napari
 =================
@@ -45,10 +72,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `napari` can be installed with:
+Once the `conda-forge` channel has been enabled, `napari, napari-menu` can be installed with:
 
 ```
-conda install napari
+conda install napari napari-menu
 ```
 
 It is possible to list all of the versions of `napari` available on your platform with:
@@ -122,6 +149,7 @@ Feedstock Maintainers
 =====================
 
 * [@AhmetCanSolak](https://github.com/AhmetCanSolak/)
+* [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kne42](https://github.com/kne42/)
 * [@royerloic](https://github.com/royerloic/)

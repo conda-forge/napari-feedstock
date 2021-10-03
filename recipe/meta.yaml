@@ -94,6 +94,19 @@ about:
   doc_url: http://napari.org
   dev_url: https://github.com/napari/napari
 
+outputs:
+  - name: napari
+    build:
+      noarch: python
+  - name: napari-menu
+    build:
+      skip: true  # [not win]
+      script:
+        - {{ RECIPE_DIR }}\install_menu.bat  # [win]
+    requirements:
+      run:
+        - {{ pin_subpackage('napari', exact=True) }}
+
 extra:
   recipe-maintainers:
     - jni
@@ -102,3 +115,4 @@ extra:
     - royerloic
     - AhmetCanSolak
     - tlambert03
+    - jaimergp

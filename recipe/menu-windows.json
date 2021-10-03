@@ -1,0 +1,20 @@
+{
+    "menu_name": "World",
+    "menu_items": [
+        {
+            "script": "${PREFIX}/python.exe",
+            "scriptarguments": [
+                "${PREFIX}/cwp.py",
+                "${PREFIX}",
+                "${PREFIX}/python.exe",
+                "-m",
+                "napari"
+            ],
+            "name": "Napari",
+            "workdir": "${PREFIX}",
+            "icon": "${MENU_DIR}/napari.ico",
+            "desktop": true,
+            "quicklaunch": true
+        }
+    ]
+}
