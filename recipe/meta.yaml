@@ -11,10 +11,6 @@ source:
 build:
   number: 1
 
-requirements:
-  host:
-    - python
-
 outputs:
   - name: {{ name }}
     version: {{ version }}
@@ -22,7 +18,7 @@ outputs:
       noarch: python
       skip: true  # [not linux]
       number: 1
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
 
