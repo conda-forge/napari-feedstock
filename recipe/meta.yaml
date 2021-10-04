@@ -5,8 +5,8 @@ package:
   name: napari-meta
 
 source:
-  url: https://github.com/napari/napari/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6ab8fe357693c7ca30a43e00a0b31239e73d5b6285230e7e6fe5ce8fa3f04c54
+  git_url: https://github.com/napari/napari.git
+  git_rev: v{{ version }}
 
 build:
   number: 1
