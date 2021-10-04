@@ -18,18 +18,18 @@ outputs:
       noarch: python
       skip: true  # [not linux]
       number: 1
-      script: {{ PREFIX }}/bin/python -m pip install . -vv
+      script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
 
     requirements:
       build:
         - pep517
-        - setuptools_scm 6.0.*
+        - setuptools_scm
       host:
         - python >=3.7
         - pip
-        - setuptools_scm 6.0.*
+        - setuptools_scm
       run:
         - python >=3.7
 
