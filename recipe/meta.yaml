@@ -99,7 +99,7 @@ outputs:
         - {{ RECIPE_DIR }}\install_menu.bat  # [win]
     requirements:
       run:
-        - {{ pin_subpackage('napari', exact=True) }}
+        - napari {{ version }}.*
     test:
       imports:
         - napari
