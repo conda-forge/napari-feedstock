@@ -2,26 +2,8 @@
     "menu_name": "Napari",
     "menu_items": [
         {
-            "script": "${PREFIX}/python.exe",
-            "scriptarguments": [
-                "-m",
-                "napari"
-            ],
-            "name": "Napari (script)",
-            "icon": "${MENU_DIR}/napari.ico",
-            "desktop": true,
-            "quicklaunch": true
-        },
-        {
-            "pywscript": "${PYTHON_SCRIPTS}/napari-script.py",
-            "name": "Napari (pywscript)",
-            "icon": "${MENU_DIR}/napari.ico",
-            "desktop": true,
-            "quicklaunch": true
-        },
-        {
             "pyscript": "${PYTHON_SCRIPTS}/napari-script.py",
-            "name": "Napari (pyscript)",
+            "name": "Napari",
             "icon": "${MENU_DIR}/napari.ico"
         },
         {
