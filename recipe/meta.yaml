@@ -93,16 +93,19 @@ outputs:
   - name: napari-menu
     version: {{ version }}
     build:
-      skip: true  # [not win]
       number: 1
       script:
         - {{ RECIPE_DIR }}\install_menu.bat  # [win]
+        - {{ RECIPE_DIR }}/install_menu.sh   # [unix]
     requirements:
       run:
         - napari {{ version }}.*
     test:
       imports:
         - napari
+      commands:
+        - test -f {{ PREFIX }}/Menu/napari.json         # [unix]
+        - if not exist %PREFIX%\Menu\napari.json exit 1 # [unix]
     about:
       home: http://napari.org
       license: BSD-3-Clause
