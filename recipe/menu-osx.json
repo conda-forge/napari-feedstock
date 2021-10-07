@@ -7,12 +7,12 @@
             "icon": "${MENU_DIR}/napari.icns"
         },
         {
-            "webbrowser": "https://napari.org/",
+            "cmd": "open https://napari.org/",
             "name": "Napari.org",
             "icon": "${MENU_DIR}/napari.icns"
         },
         {
-            "webbrowser": "https://www.napari-hub.org/",
+            "cmd": "open https://www.napari-hub.org/",
             "name": "Napari Hub",
             "icon": "${MENU_DIR}/napari.icns"
         }

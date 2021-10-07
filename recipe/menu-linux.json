@@ -2,19 +2,36 @@
     "menu_name": "Napari",
     "menu_items": [
         {
-            "pyscript": "${PYTHON_SCRIPTS}/napari-script.py",
+            "cmd": [
+                "${PREFIX}/bin/python",
+                "-m",
+                "napari"
+            ],
             "name": "Napari",
-            "icon": "${MENU_DIR}/napari.png"
+            "icon": "${PREFIX}/Menu/napari.png",
+            "id": "app",
+            "comment": "Launch the main Napari app",
+            "terminal": true
         },
         {
-            "webbrowser": "https://napari.org/",
+            "cmd": [
+                "{{WEBBROWSER}}",
+                "https://napari.org/"
+            ],
             "name": "Napari.org",
-            "icon": "${MENU_DIR}/napari.png"
+            "id": "org",
+            "comment": "Go to Napari's website",
+            "icon": "${PREFIX}/Menu/napari.png"
         },
         {
-            "webbrowser": "https://www.napari-hub.org/",
+            "cmd": [
+                "{{WEBBROWSER}}",
+                "https://www.napari-hub.org/"
+            ],
             "name": "Napari Hub",
-            "icon": "${MENU_DIR}/napari.png"
+            "id": "hub",
+            "comment": "Go to Napari Hub's website",
+            "icon": "${PREFIX}/Menu/napari.png"
         }
     ]
 }
