@@ -95,8 +95,8 @@ outputs:
     build:
       number: 1
       script:
-        - {{ RECIPE_DIR }}\install_menu.bat  # [win]
-        - {{ RECIPE_DIR }}/install_menu.sh   # [unix]
+        - {{ RECIPE_DIR }}\install_menu.bat       # [win]
+        - bash {{ RECIPE_DIR }}/install_menu.sh   # [unix]
     requirements:
       run:
         - napari {{ version }}.*
