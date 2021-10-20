@@ -106,7 +106,8 @@ outputs:
         - napari                                               # [linux]
       commands:                                                # [linux]
         - test -f ${CONDA_PREFIX}/Menu/napari.json             # [linux]
-        - if not exist %CONDA_PREFIX%\Menu\napari.json exit 1  # [linux]
+        # - if not exist %CONDA_PREFIX%\Menu\napari.json exit 1  # [win]
+
     about:
       home: http://napari.org
       license: BSD-3-Clause
