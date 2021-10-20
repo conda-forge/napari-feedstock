@@ -101,12 +101,12 @@ outputs:
       run:
         - napari {{ version }}.*
         - python.app  # [osx]
-    test:
-      imports:
-        - napari
-      commands:
-        - test -f ${CONDA_PREFIX}/Menu/napari.json             # [unix]
-        - if not exist %CONDA_PREFIX%\Menu\napari.json exit 1  # [win]
+    test:                                                      # [linux]
+      imports:                                                 # [linux]
+        - napari                                               # [linux]
+      commands:                                                # [linux]
+        - test -f ${CONDA_PREFIX}/Menu/napari.json             # [linux]
+        - if not exist %CONDA_PREFIX%\Menu\napari.json exit 1  # [linux]
     about:
       home: http://napari.org
       license: BSD-3-Clause
