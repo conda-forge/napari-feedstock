@@ -5,7 +5,7 @@ package:
   name: napari-meta
 
 source:
-  git_url: https://github.com/napari/napari.git
+  git_url: https://github.com/jaimergp/napari.git
   git_rev: conda-bundle-poc
 
 build:
