@@ -41,7 +41,7 @@ outputs:
         - imageio >=2.5.0
         - importlib-metadata >=1.5.0  # not needed for py>37 but keeping for noarch
         - jsonschema >=3.2.0
-        - magicgui >=0.2.6
+        - magicgui >=0.3
         - napari-console >=0.0.3
         - napari-plugin-engine >=0.1.9
         - napari-svg >=0.1.4
