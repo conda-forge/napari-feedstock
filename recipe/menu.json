@@ -1,0 +1,20 @@
+{
+    "menu_name": "napari",
+    "menu_items": [
+        {
+            "name": "napari",
+            "description": "a fast n-dimensional image viewer in Python",
+            "icon": "{{ MENU_DIR }}/napari.{{ ICON_EXT }}",
+            "command": [
+                "{{ PYTHON }}",
+                "-m",
+                "napari"
+            ],
+            "platforms": {
+                "win": {},
+                "linux": {},
+                "osx": {}
+            }
+        }
+    ]
+}

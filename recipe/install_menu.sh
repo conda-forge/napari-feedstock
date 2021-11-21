@@ -3,10 +3,9 @@
 set -euxo pipefail
 
 mkdir -p "${PREFIX}/Menu"
+cp "${RECIPE_DIR}/menu.json" "${PREFIX}/Menu/napari.json"
 if [[ $target_platform == linux* ]]; then
-    cp "${RECIPE_DIR}/menu-linux.json" "${PREFIX}/Menu/napari.json"
     cp "${SRC_DIR}/napari/resources/logo.png" "${PREFIX}/Menu/napari.png"
 else
-    cp "${RECIPE_DIR}/menu-osx.json" "${PREFIX}/Menu/napari.json"
     cp "${SRC_DIR}/napari/resources/icon.icns" "${PREFIX}/Menu/napari.icns"
 fi
