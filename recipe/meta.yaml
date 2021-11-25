@@ -9,7 +9,7 @@ source:
   git_rev: conda-bundle-poc
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: {{ name }}
@@ -17,7 +17,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [not linux]
-      number: 2
+      number: 3
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
@@ -93,11 +93,14 @@ outputs:
   - name: napari-menu
     version: {{ version }}
     build:
-      number: 2
+      number: 3
       script:
         - {{ RECIPE_DIR }}\install_menu.bat       # [win]
         - bash {{ RECIPE_DIR }}/install_menu.sh   # [unix]
     requirements:
+      build:
+        - sed     # [unix]
+        - m2-sed  # [win]
       run:
         - napari {{ version }}.*
         - python.app  # [osx]

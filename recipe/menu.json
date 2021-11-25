@@ -4,7 +4,7 @@
     "menu_name": "napari",
     "menu_items": [
         {
-            "name": "napari",
+            "name": "napari __PKG_VERSION__",
             "description": "a fast n-dimensional image viewer in Python",
             "icon": "{{ MENU_DIR }}/napari.{{ ICON_EXT }}",
             "command": [
