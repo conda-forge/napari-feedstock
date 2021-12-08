@@ -12,26 +12,13 @@
                 "-m",
                 "napari"
             ],
+            "activate": true,
             "platforms": {
                 "win": {
-                    "command": [
-                        "{{ PYTHON }}",
-                        "{{ CWP }}",
-                        "{{ PREFIX }}",
-                        "{{ PYTHON }}",
-                        "-m",
-                        "napari"
-                    ],
                     "desktop": true
                 },
                 "linux": {},
-                "osx": {
-                    "command": [
-                        "{{ PYTHONAPP }}",
-                        "-m",
-                        "napari"
-                    ]
-                }
+                "osx": {}
             }
         }
     ]
