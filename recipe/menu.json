@@ -18,7 +18,10 @@
                     "desktop": true
                 },
                 "linux": {},
-                "osx": {}
+                "osx": {
+                    "CFBundleName": "napari",
+                    "CFBundleDisplayName": "napari"
+                }
             }
         }
     ]
