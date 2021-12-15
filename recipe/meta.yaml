@@ -103,13 +103,18 @@ outputs:
         - m2-sed  # [win]
       run:
         - napari {{ version }}.*
-        - python.app  # [osx]
     test:                                                      # [linux]
       imports:                                                 # [linux]
         - napari                                               # [linux]
       commands:                                                # [linux]
         - test -f ${CONDA_PREFIX}/Menu/napari.json             # [linux]
         # - if not exist %CONDA_PREFIX%\Menu\napari.json exit 1  # [win]
+
+    app:
+      entry: python -m napari
+      icon: "{{ SRC_DIR }}/napari/resources/logo.png"
+      summary: a fast n-dimensional image viewer in Python
+      own_environment: True
 
     about:
       home: http://napari.org
