@@ -13,6 +13,7 @@
                 "napari"
             ],
             "activate": true,
+            "terminal": false,
             "platforms": {
                 "win": {
                     "desktop": true
@@ -21,12 +22,12 @@
                     "Categories": [
                         "Graphics",
                         "Science"
-                    ],
-                    "Terminal": false
+                    ]
                 },
                 "osx": {
                     "CFBundleName": "napari",
-                    "CFBundleDisplayName": "napari"
+                    "CFBundleDisplayName": "napari",
+                    "CFBundleVersion": "__PKG_VERSION__"
                 }
             }
         }
