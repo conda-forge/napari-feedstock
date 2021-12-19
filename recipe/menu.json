@@ -17,7 +17,13 @@
                 "win": {
                     "desktop": true
                 },
-                "linux": {},
+                "linux": {
+                    "Categories": [
+                        "Graphics",
+                        "Science"
+                    ],
+                    "Terminal": false
+                },
                 "osx": {
                     "CFBundleName": "napari",
                     "CFBundleDisplayName": "napari"
