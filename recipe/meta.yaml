@@ -112,7 +112,7 @@ outputs:
 
     app:
       entry: python -m napari
-      icon: "{{ SRC_DIR }}/napari/resources/logo.png"
+      icon: "{{ SRC_DIR.replace('\\', '/') }}/napari/resources/logo.png"
       summary: a fast n-dimensional image viewer in Python
       own_environment: True
 
