@@ -70,11 +70,6 @@ outputs:
         - zarr
         - {{ qt_bindings }}
 
-      run_constrained:
-        - pyqt  <0.0a     # [qt_bindings == 'pyside2']
-        - pyside2 <0.0a   # [qt_bindings == 'pyqt']
-        - pyside  <0.0a   # [qt_bindings == 'pyqt']
-
     test:
       requires:
         - hypothesis
