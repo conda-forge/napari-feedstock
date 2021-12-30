@@ -1,6 +1,6 @@
 {% set name = "napari" %}
 {% set version = "0.4.13a" %}
-
+{% set build = 4 %}
 package:
   name: napari-meta
 
@@ -9,7 +9,7 @@ source:
   git_rev: conda-bundle-poc
 
 build:
-  number: 5
+  number: {{ build }}
 
 outputs:
   - name: {{ name }}
@@ -17,7 +17,8 @@ outputs:
     build:
       noarch: python
       skip: true  # [not linux]
-      number: 5
+      number: {{ build }}
+      string: "pyh{{ PKG_HASH }}_{{ build }}_{{ qt_bindings }}"
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
@@ -65,9 +66,15 @@ outputs:
 
         # additional dependencies for convenience in conda-forge
         - fsspec
-        - pyqt
         - scikit-image
         - zarr
+        - {{ qt_bindings }}
+
+      run_constrained:
+        - pyqt5 <0.0a     # [qt_bindings == 'pyside2']
+        - pyqt  <0.0a     # [qt_bindings == 'pyside2']
+        - pyside2 <0.0a   # [qt_bindings == 'pyqt5']
+        - pyside  <0.0a   # [qt_bindings == 'pyqt5']
 
     test:
       requires:
@@ -95,7 +102,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [not linux]
-      number: 5
+      number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
         - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ RECIPE_DIR }}/menu.json" > "{{ PREFIX }}/Menu/napari.json"

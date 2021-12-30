@@ -8,11 +8,16 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_:
-        CONFIG: linux_64_
+      linux_64_qt_bindingspyqt5:
+        CONFIG: linux_64_qt_bindingspyqt5
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-        SHORT_CONFIG: linux_64_
+        SHORT_CONFIG: linux_64_qt_bindingspyqt5
+      linux_64_qt_bindingspyside2:
+        CONFIG: linux_64_qt_bindingspyside2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        SHORT_CONFIG: linux_64_qt_bindingspyside2
   timeoutInMinutes: 360
 
   steps:
