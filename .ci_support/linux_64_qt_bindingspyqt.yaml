@@ -12,4 +12,4 @@ pin_run_as_build:
 qt:
 - '5.12'
 qt_bindings:
-- pyqt5
+- pyqt
