@@ -95,7 +95,8 @@ outputs:
     version: {{ version }}
     build:
       noarch: python
-      skip: true  # [not linux]
+      # we only need to build this once
+      skip: true  # [qt_bindings == 'pyside2']
       number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
