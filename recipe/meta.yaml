@@ -133,8 +133,7 @@ outputs:
 
 about:
   home: http://napari.org
-  license: BSD-3-Clause
-  license_family: BSD
+  license: BSD-3-Clause AND MIT
   license_file:
     - LICENSE
     # - napari/_vendor/cpython/LICENSE
