@@ -43,7 +43,7 @@ requirements:
     - numpy >=1.18.5
     - numpydoc >=0.9.2
     - pandas >=1.1.0
-    - pillow
+    - pillow !=7.1.0,!=7.1.1
     - pint >=0.17
     - psutil >=5.0
     - pyopengl >=3.1.0
