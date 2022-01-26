@@ -74,6 +74,7 @@ test:
     - pytest-qt
     - xarray
     - pandas
+    - pip
     - pooch
     - pytest-timeout
     - zarr
