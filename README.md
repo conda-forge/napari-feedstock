@@ -3,7 +3,7 @@ About napari
 
 Home: http://napari.org
 
-Package license: BSD-3-Clause
+Package license: BSD-3-Clause AND MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/master/LICENSE.txt)
 
@@ -124,6 +124,7 @@ Feedstock Maintainers
 =====================
 
 * [@AhmetCanSolak](https://github.com/AhmetCanSolak/)
+* [@goanpeca](https://github.com/goanpeca/)
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kne42](https://github.com/kne42/)
