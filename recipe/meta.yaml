@@ -88,8 +88,9 @@ outputs:
         - setx QT_API "pyqt5"  # [win]
         - export QT_API=pyqt5  # [unix]
         - which napari
-        #- DISPLAY=localhost:1.0 xvfb-run -a bash -c 'napari --info'
-        #- pytest --pyargs napari
+        - napari --info  # [not linux]
+        - DISPLAY=localhost:1.0 xvfb-run -a napari --info  # [linux]
+        # - pytest --pyargs napari
 
   - name: napari-menu
     version: {{ version }}
