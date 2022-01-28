@@ -1,6 +1,6 @@
 {% set name = "napari" %}
-{% set version = "0.4.13a" %}
-{% set build = 4 %}
+{% set version = "0.4.14a" %}
+{% set build = 0 %}
 package:
   name: napari-meta
 
