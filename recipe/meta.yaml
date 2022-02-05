@@ -1,5 +1,5 @@
 {% set name = "napari" %}
-{% set version = "0.4.13" %}
+{% set version = "0.4.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 54bb85c3afbf12d1333512aa0f7bdae0d652ddbe6bede1476fc6d0e89c1c87fb
+  sha256: 277dd9492bbdfa2cf5ae60f503abe07bcab851fe69f42bfcbf8d601965f3a92b
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - napari = napari.__main__:main
