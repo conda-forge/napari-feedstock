@@ -123,6 +123,8 @@ Feedstock Maintainers
 =====================
 
 * [@AhmetCanSolak](https://github.com/AhmetCanSolak/)
+* [@goanpeca](https://github.com/goanpeca/)
+* [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kne42](https://github.com/kne42/)
 * [@royerloic](https://github.com/royerloic/)
