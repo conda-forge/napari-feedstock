@@ -89,7 +89,7 @@ outputs:
         - export QT_API=pyqt5  # [unix]
         - which napari
         - napari --info  # [not linux]
-        - QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info || true # [linux]
+        - QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info || true  # [linux]
         # - pytest --pyargs napari
 
   - name: napari-menu
@@ -116,11 +116,11 @@ outputs:
       commands:
         - test -f ${CONDA_PREFIX}/Menu/napari.json
 
-    app:
-      entry: python -m napari
-      icon: "{{ SRC_DIR|replace('\\', '/') }}/napari/resources/logo.png"
-      summary: a fast n-dimensional image viewer in Python
-      own_environment: True
+    # app:
+    #   entry: python -m napari
+    #   icon: "{{ SRC_DIR|replace('\\', '/') }}/napari/resources/logo.png"
+    #   summary: a fast n-dimensional image viewer in Python
+    #   own_environment: True
 
     about:
       home: http://napari.org
@@ -131,7 +131,6 @@ outputs:
       description: provides menu icons for napari
       doc_url: http://napari.org
       dev_url: https://github.com/napari/napari
-
 
 about:
   home: http://napari.org
