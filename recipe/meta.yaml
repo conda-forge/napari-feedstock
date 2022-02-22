@@ -1,6 +1,7 @@
 {% set name = "napari" %}
 {% set version = "0.4.15a" %}
 {% set build = 0 %}
+
 package:
   name: napari-meta
 
@@ -130,6 +131,7 @@ outputs:
       description: provides menu icons for napari
       doc_url: http://napari.org
       dev_url: https://github.com/napari/napari
+
 
 about:
   home: http://napari.org
