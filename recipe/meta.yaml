@@ -1,5 +1,5 @@
 {% set name = "napari" %}
-{% set version = "0.4.14a" %}
+{% set version = "0.4.15a" %}
 {% set build = 0 %}
 package:
   name: napari-meta
@@ -28,11 +28,11 @@ outputs:
         - pep517
         - setuptools_scm
       host:
-        - python >=3.7
+        - python >=3.8
         - pip
         - setuptools_scm
       run:
-        - python >=3.7
+        - python >=3.8
 
         # dependencies matched to pip
         - appdirs >=1.4.4
@@ -40,7 +40,6 @@ outputs:
         - certifi >=2020.6.20
         - dask >=2.15.0,!=2.28.0
         - imageio >=2.5.0,!=2.11.0
-        - importlib-metadata >=1.5.0  # not needed for py>37 but keeping for noarch
         - jsonschema >=3.2.0
         - magicgui >=0.3.3
         - napari-console >=0.0.4
