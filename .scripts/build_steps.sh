@@ -37,7 +37,7 @@ mamba update --update-specs --yes --quiet --channel conda-forge \
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
-CI="github-actions" source run_conda_forge_build_setup
+source run_conda_forge_build_setup
 
 
 # Install the yum requirements defined canonically in the
