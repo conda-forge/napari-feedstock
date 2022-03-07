@@ -1,13 +1,14 @@
 {% set name = "napari" %}
-{% set version = "0.4.15a" %}
+{% set version = "0.4.15rc1" %}
 {% set build = 0 %}
 
 package:
   name: napari-meta
 
 source:
-  git_url: https://github.com/napari/napari.git
-  git_rev: conda-bundle-poc
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: f666a4b9d1fbb5d91bc29301ca6c6ecd66983e2343092e0cb420fce23091e35e
+  - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
 
 build:
   number: {{ build }}
@@ -120,7 +121,7 @@ outputs:
       number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
-        - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/resources/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
+        - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
         - cp "{{ SRC_DIR }}/napari/resources/logo.png" "{{ PREFIX }}/Menu/napari.png"
         - cp "{{ SRC_DIR }}/napari/resources/icon.icns" "{{ PREFIX }}/Menu/napari.icns"
         - cp "{{ SRC_DIR }}/napari/resources/icon.ico" "{{ PREFIX }}/Menu/napari.ico"
