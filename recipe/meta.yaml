@@ -10,6 +10,7 @@ source:
     sha256: f666a4b9d1fbb5d91bc29301ca6c6ecd66983e2343092e0cb420fce23091e35e
   # change the tag reference here (----------------------vvvvvv) to the versioned RC when available!
   - url: https://raw.githubusercontent.com/napari/napari/02f4e7/resources/conda_menu_config.json
+    folder: resources
     sha256: ea0a81d593ba26f5080b693ba885fda6b5d6390b00ff965e8d07d3bbdbc7ca41
 
 build:
@@ -123,7 +124,7 @@ outputs:
       number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
-        - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
+        - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/resources/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
         - cp "{{ SRC_DIR }}/napari/resources/logo.png" "{{ PREFIX }}/Menu/napari.png"
         - cp "{{ SRC_DIR }}/napari/resources/icon.icns" "{{ PREFIX }}/Menu/napari.icns"
         - cp "{{ SRC_DIR }}/napari/resources/icon.ico" "{{ PREFIX }}/Menu/napari.ico"
