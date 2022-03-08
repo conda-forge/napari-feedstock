@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: f666a4b9d1fbb5d91bc29301ca6c6ecd66983e2343092e0cb420fce23091e35e
+    sha256: c282862191966106fa73a675f10985be927dcfdcafd46bf99b05d7a800323af4
   - url: https://raw.githubusercontent.com/napari/v{{ version }}/02f4e7/resources/conda_menu_config.json
     folder: resources
     sha256: ea0a81d593ba26f5080b693ba885fda6b5d6390b00ff965e8d07d3bbdbc7ca41
