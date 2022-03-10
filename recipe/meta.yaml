@@ -78,8 +78,8 @@ outputs:
         - zarr
 
         # variants
-        - pyside2 >=5.12,!=5.15.0  # [qt_bindings == 'pyside2']
-        - pyqt >=5.12.3,!=5.15.0   # [qt_bindings == 'pyqt']
+        - pyside2 >=5.13.2,!=5.15.0  # [qt_bindings == 'pyside2']
+        - pyqt >=5.12.3,!=5.15.0  # [qt_bindings == 'pyqt']
 
     test:
       requires:
