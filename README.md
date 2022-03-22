@@ -5,7 +5,7 @@ Home: http://napari.org
 
 Package license: BSD-3-Clause AND MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/main/LICENSE.txt)
 
 Summary: a fast n-dimensional image viewer in Python
 
@@ -21,8 +21,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=main">
       </a>
     </td>
   </tr>
