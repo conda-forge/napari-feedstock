@@ -21,12 +21,12 @@ outputs:
     build:
       noarch: python
       number: {{ build }}
-      string: "pyh{{ PKG_HASH }}_{{ build }}_{{ qt_bindings }}"
+      string: pyh{{ PKG_HASH }}_{{ build }}_{{ qt_bindings }}
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
       # de-prioritize pyside so pyqt gets installed by default if unspecified
-      track_features:     # [qt_bindings == 'pyside2']
+      track_features:   # [qt_bindings == 'pyside2']
         - napari_pyside2  # [qt_bindings == 'pyside2']
 
     requirements:
