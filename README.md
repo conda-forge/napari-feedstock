@@ -3,7 +3,7 @@ About napari
 
 Home: http://napari.org
 
-Package license: BSD-3-Clause
+Package license: BSD-3-Clause AND MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/master/LICENSE.txt)
 
@@ -34,6 +34,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-napari-green.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-napari--menu-green.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) |
 
 Installing napari
 =================
@@ -45,10 +46,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `napari` can be installed with:
+Once the `conda-forge` channel has been enabled, `napari, napari-menu` can be installed with:
 
 ```
-conda install napari
+conda install napari napari-menu
 ```
 
 It is possible to list all of the versions of `napari` available on your platform with:
