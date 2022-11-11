@@ -111,7 +111,7 @@ outputs:
       license_file:
         - LICENSE
         # - napari/_vendor/cpython/LICENSE
-        # - napari/_vendor/darkdetect/LICENSE
+        - napari/_vendor/darkdetect/LICENSE
         - napari/_vendor/experimental/cachetools/LICENSE
         - napari/_vendor/experimental/humanize/LICENCE
         - napari/_vendor/qt_json_builder/LICENSE
