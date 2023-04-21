@@ -34,11 +34,11 @@ outputs:
         - pep517
         - setuptools_scm
       host:
-        - python >=3.8
+        - python >=3.8,<3.11
         - pip
         - setuptools_scm
       run:
-        - python >=3.8
+        - python >=3.8,<3.11
 
         # dependencies matched to setup.cfg
         - app-model >=0.0.8,<0.3.0a
