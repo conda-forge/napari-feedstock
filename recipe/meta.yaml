@@ -60,7 +60,7 @@ outputs:
         - pint >=0.17
         - psutil >=5.0
         - psygnal>=0.3.4
-        - pydantic >=1.9.0
+        - pydantic >=1.9.0,<2
         - pygments >=2.4.0
         - pyopengl >=3.1.0
         - pyyaml >=5.1

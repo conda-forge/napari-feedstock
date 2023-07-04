@@ -7,6 +7,6 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 qt:
-- '5.12'
+- '5.15'
 qt_bindings:
 - pyside2
