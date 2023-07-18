@@ -1,6 +1,6 @@
 {% set name = "napari" %}
 {% set version = "0.4.18" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: napari-meta
@@ -21,13 +21,9 @@ outputs:
     build:
       noarch: python
       number: {{ build }}
-      string: pyh{{ PKG_HASH }}_{{ build }}_{{ qt_bindings }}
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
-      # de-prioritize pyside so pyqt gets installed by default if unspecified
-      track_features:   # [qt_bindings == 'pyside2']
-        - napari_pyside2  # [qt_bindings == 'pyside2']
 
     requirements:
       build:
@@ -74,7 +70,7 @@ outputs:
         - toolz >=0.10.0
         - tqdm >=4.56.0
         - typing_extensions >=4.2.0
-        - vispy >=0.12.1, <0.13
+        - vispy >=0.12.1,<0.13
         - wrapt >=1.11.1
 
         # additional dependencies for convenience in conda-forge
@@ -82,9 +78,9 @@ outputs:
         - pooch >=1.3.0
         - zarr
 
-        # variants
-        - pyside2 >=5.14.2,!=5.15.0  # [qt_bindings == 'pyside2']
-        - pyqt >=5.12.3,!=5.15.0  # [qt_bindings == 'pyqt']
+      run_constrained:
+        - pyside2 >=5.14.2,!=5.15.0
+        - pyqt >=5.12.3,!=5.15.0
 
     test:
       # needed if pytest is uncommented below in 'commands'
@@ -125,7 +121,6 @@ outputs:
     version: {{ version }}
     build:
       noarch: python
-      skip: true  # [qt_bindings == 'pyside2']
       number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"

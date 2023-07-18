@@ -3,6 +3,7 @@ About napari-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstock/blob/main/LICENSE.txt)
 
+
 About napari
 ------------
 
@@ -17,6 +18,7 @@ Development: https://github.com/napari/napari
 Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
+
 About napari
 ------------
 
@@ -31,6 +33,7 @@ Development: https://github.com/napari/napari
 Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
+
 About napari-menu
 -----------------
 
