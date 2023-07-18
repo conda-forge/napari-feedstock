@@ -1,6 +1,6 @@
 {% set name = "napari" %}
 {% set version = "0.4.18" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: napari-meta
@@ -8,6 +8,8 @@ package:
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: daea9ab94124140fc0f715e945dd1dd6dc3056a1cb2f2cc31fc29b80162943e4
+    patches:
+      - no-qt-binding-msg.patch  # only for 0.4.18; remove in 0.5!
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 45e8cfe4228fcad9954efe9bc7ffd3502302f740b107bc63d3e241d2cfa89bda
