@@ -1,8 +1,8 @@
 diff --git a/napari/__main__.py b/napari/__main__.py
-index b3b4a15b..ba3e518a 100644
+index b3b4a15b..f4825c3b 100644
 --- a/napari/__main__.py
 +++ b/napari/__main__.py
-@@ -549,19 +549,40 @@ def _maybe_rerun_with_macos_fixes():
+@@ -549,19 +549,37 @@ def _maybe_rerun_with_macos_fixes():
  
  
  def main():
@@ -44,10 +44,7 @@ index b3b4a15b..ba3e518a 100644
 +        ):
 +            msg = (
 +                "napari requires either PyQt5 or PySide2 to be installed.\n\n"
-+                "If you are using pip, you can install either with:\n"
-+                "  $ pip install -U napari[pyqt]\n"
-+                "  $ pip install -U napari[pyside]\n\n"
-+                "If you are using conda, you can install either with:\n"
++                "You can install either with:\n"
 +                "  $ conda install pyqt\n"
 +                "  $ conda install pyside2\n"
 +            )
