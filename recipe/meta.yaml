@@ -85,8 +85,9 @@ outputs:
         - pyqt >=5.12.3,!=5.15.0
 
     test:
+      requires:
+        - pyqt
       # needed if pytest is uncommented below in 'commands'
-      # requires:
       #   - hypothesis
       #   - pytest
       #   - pytest-faulthandler
