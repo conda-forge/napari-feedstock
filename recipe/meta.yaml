@@ -1,6 +1,5 @@
 {% set name = "napari" %}
 {% set version = "0.4.18" %}
-{% set build = 2 %}
 
 package:
   name: napari-meta
@@ -10,19 +9,20 @@ source:
     sha256: daea9ab94124140fc0f715e945dd1dd6dc3056a1cb2f2cc31fc29b80162943e4
     patches:
       - no-qt-binding-msg.patch  # only for 0.4.18; remove in 0.5!
+      # Sphinx is a documentation dependency, not a runtime dependency
+      - no_sphinx_requirement.patch
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 45e8cfe4228fcad9954efe9bc7ffd3502302f740b107bc63d3e241d2cfa89bda
 
 build:
-  number: {{ build }}
+  number: 3
 
 outputs:
   - name: napari
     version: {{ version }}
     build:
       noarch: python
-      number: {{ build }}
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
@@ -66,7 +66,6 @@ outputs:
         - qtpy >=1.10.0
         - scikit-image >=0.19.1
         - scipy >=1.5.4
-        - sphinx >=4.3.0,<5
         - superqt >=0.4.1
         - tifffile >=2020.2.16
         - toolz >=0.10.0
@@ -124,7 +123,6 @@ outputs:
     version: {{ version }}
     build:
       noarch: python
-      number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
         - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/resources/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
