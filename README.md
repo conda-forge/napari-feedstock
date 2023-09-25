@@ -191,5 +191,4 @@ Feedstock Maintainers
 * [@kne42](https://github.com/kne42/)
 * [@royerloic](https://github.com/royerloic/)
 * [@sofroniewn](https://github.com/sofroniewn/)
-* [@tlambert03](https://github.com/tlambert03/)
 
