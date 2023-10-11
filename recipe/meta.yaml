@@ -1,6 +1,5 @@
 {% set name = "napari" %}
 {% set version = "0.4.18" %}
-{% set build = 2 %}
 
 package:
   name: napari-meta
@@ -15,14 +14,13 @@ source:
     sha256: 45e8cfe4228fcad9954efe9bc7ffd3502302f740b107bc63d3e241d2cfa89bda
 
 build:
-  number: {{ build }}
+  number: 3
 
 outputs:
   - name: napari
     version: {{ version }}
     build:
       noarch: python
-      number: {{ build }}
       script: PIP_NO_INDEX=True PIP_NO_DEPENDENCIES=True PIP_NO_BUILD_ISOLATION=False PIP_IGNORE_INSTALLED=True PYTHONDONTWRITEBYTECODE=True {{ PREFIX }}/bin/python -m pip install . -vv
       entry_points:
         - napari = napari.__main__:main
@@ -43,7 +41,12 @@ outputs:
         - appdirs >=1.4.4
         - cachey >=0.2.1
         - certifi >=2020.6.20
-        - dask >=2.15.0,!=2.28.0
+        # Do not depend on base "dask" package since it pulls
+        # in the distributed dependency
+        # conda-forge doesn't have the dask-array subpackage
+        # so depend on cytoolz and numpy manually
+        - dask-core>=2.15.0,!=2.28.0
+        - cytoolz >=0.11.0
         - imageio >=2.20,!=2.22.1
         - jsonschema >=3.2.0
         - lazy_loader >=0.2
@@ -124,7 +127,6 @@ outputs:
     version: {{ version }}
     build:
       noarch: python
-      number: {{ build }}
       script:
         - mkdir -p "${PREFIX}/Menu"
         - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/resources/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
