@@ -12,7 +12,7 @@ source:
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari
@@ -35,16 +35,15 @@ outputs:
         - python >=3.8
 
         # dependencies matched to setup.cfg
-        - app-model >=0.1.2,<0.3.0a
         - appdirs >=1.4.4
+        - app-model >=0.1.2,<0.3.0a
         - cachey >=0.2.1
-        - certifi >=2020.6.20
+        - certifi >=2018.1.18
         # Do not depend on base "dask" package since it pulls
         # in the distributed dependency
         # conda-forge doesn't have the dask-array subpackage
         # so depend on cytoolz and numpy manually
         - dask-core>=2.15.0,!=2.28.0
-        - cytoolz >=0.11.0
         - imageio >=2.20,!=2.22.1
         - jsonschema >=3.2.0
         - lazy_loader >=0.2
@@ -67,7 +66,6 @@ outputs:
         - qtpy >=1.10.0
         - scikit-image >=0.19.1
         - scipy >=1.5.4
-        - sphinx >=4.3.0,<5
         - superqt >=0.4.1
         - tifffile >=2020.2.16
         - toolz >=0.10.0
