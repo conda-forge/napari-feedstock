@@ -90,6 +90,7 @@ outputs:
     test:
       requires:
         - pyqt
+        - {{ cdt('xorg-x11-server-xvfb') }}  # [linux]
       # needed if pytest is uncommented below in 'commands'
       #   - hypothesis
       #   - pytest
