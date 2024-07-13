@@ -12,7 +12,7 @@ source:
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari
