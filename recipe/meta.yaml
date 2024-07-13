@@ -49,6 +49,7 @@ outputs:
         - magicgui >=0.7.0
         - napari-console >=0.0.9
         - napari-plugin-engine >=0.1.9
+        - napari-plugin-manager >=0.1.0a2
         - napari-svg >=0.1.8
         - npe2 >=0.7.6
         - numpy >=1.22.2
