@@ -12,7 +12,7 @@ source:
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari
@@ -81,7 +81,7 @@ outputs:
       run_constrained:
         - napari-plugin-manager >=0.1.0a2,<0.3.0a0
         - pyside2 >=5.13.2,!=5.15.0
-        - pyside6 <6.5,>=6.7
+        - pyside6 <6.5|>=6.7
         - pyqt >=5.12.3,!=5.15.0,<6.0a0|>=6.5,!=6.6.1
         # Nice for performance, but optional. Inclusion under discussion.
         # - py-triangle
