@@ -19,6 +19,19 @@ Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
 
+About napari-base
+-----------------
+
+Home: http://napari.org
+
+Package license: BSD-3-Clause AND MIT
+
+Summary: a fast n-dimensional image viewer in Python, with only the required dependencies
+
+Development: https://github.com/napari/napari
+
+Documentation: http://napari.org
+
 About napari
 ------------
 
@@ -68,6 +81,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-napari-green.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari.svg)](https://anaconda.org/conda-forge/napari) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-napari--base-green.svg)](https://anaconda.org/conda-forge/napari-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari-base.svg)](https://anaconda.org/conda-forge/napari-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari-base.svg)](https://anaconda.org/conda-forge/napari-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari-base.svg)](https://anaconda.org/conda-forge/napari-base) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-napari--menu-green.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/napari-menu.svg)](https://anaconda.org/conda-forge/napari-menu) |
 
 Installing napari
@@ -80,16 +94,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `napari, napari-menu` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `napari, napari-base, napari-menu` can be installed with `conda`:
 
 ```
-conda install napari napari-menu
+conda install napari napari-base napari-menu
 ```
 
 or with `mamba`:
 
 ```
-mamba install napari napari-menu
+mamba install napari napari-base napari-menu
 ```
 
 It is possible to list all of the versions of `napari` available on your platform with `conda`:
