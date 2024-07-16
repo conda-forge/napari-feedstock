@@ -121,7 +121,7 @@ outputs:
         - napari-svg >=0.1.8
         - numba >=0.57.1
         - pooch >=1.3.0
-        # - py-triangle  # a bit fragile with bad data, leave out for now
+        # - py-triangle  # can segfault with bad data: https://github.com/napari/napari/pull/6654
         - zarr >=2.12.0
     test:  # just to check that the environment can indeed solve
       requires:
