@@ -115,7 +115,7 @@ outputs:
       noarch: python
     requirements:
       run:
-        - {{ pin_subpackage('napari-base', exact=True )}}
+        - {{ pin_subpackage('napari-base', exact=True) }}
         - fsspec
         - napari-plugin-manager >=0.1.0a2,<0.3.0a0
         - napari-svg >=0.1.8
