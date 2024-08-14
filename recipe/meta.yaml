@@ -1,12 +1,13 @@
 {% set name = "napari" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: napari-meta
+  version: {{ version }}
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 3915d9d555686d38ef86dcb6ce92944251e7f7c9e3ecd5773bb169a5a613d52b
+    sha256: 82ddcebf094b1cb5d407725c9f09eaa16ee7184a2a95681aa6fdfef2d4bd5645
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
@@ -33,7 +34,7 @@ outputs:
         - python >=3.9
 
         # dependencies matched to pyproject.toml
-        - app-model >=0.2.5,<0.3.0a
+        - app-model >=0.2.8,<0.3.0a
         - appdirs >=1.4.4
         - cachey >=0.2.1
         - certifi >=2018.1.18
