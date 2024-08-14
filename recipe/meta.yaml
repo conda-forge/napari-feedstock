@@ -3,6 +3,7 @@
 
 package:
   name: napari-meta
+  version: {{ version }}
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
