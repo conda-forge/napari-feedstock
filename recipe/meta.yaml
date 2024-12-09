@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: 3311140a873c903b7975d1607dadab04c3f94dbb3f9c3c599bb31c5c981591e4
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari-base
@@ -26,12 +26,12 @@ outputs:
 
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
         - pip
         - setuptools >=69
         - setuptools_scm >=8
       run:
-        - python >=3.9
+        - python >={{ python_min }}
 
         # dependencies matched to pyproject.toml
         - app-model >=0.3.0,<0.4.0a
@@ -89,6 +89,7 @@ outputs:
       #   - xarray
       #   - pandas
       #   - pytest-timeout
+        - python {{ python_min }}
       imports:
         - napari
       commands:
@@ -127,6 +128,7 @@ outputs:
     test:  # just to check that the environment can indeed solve
       requires:
         - pyside2  # use this opportunity to test solvability with other backend
+        - python {{ python_min }}
       imports:
         - napari
     about:
@@ -154,6 +156,8 @@ outputs:
       run:
         - napari {{ version }}.*
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - napari
       commands:
