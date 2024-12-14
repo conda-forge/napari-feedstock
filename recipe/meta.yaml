@@ -61,6 +61,7 @@ outputs:
         - pydantic >=1.9.0
         - pygments >=2.6.0
         - pyopengl >=3.1.0
+        - python-dotenv
         - pywin32  # [win]
         - pyyaml >=5.1
         - qtpy >=1.10.0
