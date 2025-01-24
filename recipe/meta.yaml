@@ -118,7 +118,13 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
+        - pip
+        - setuptools >=69
+        - setuptools_scm >=8
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('napari-base', exact=True) }}
         - fsspec
         - napari-plugin-manager >=0.1.3,<0.2.0a0
@@ -153,9 +159,15 @@ outputs:
         - cp "{{ SRC_DIR }}/napari/resources/icon.icns" "{{ PREFIX }}/Menu/napari.icns"
         - cp "{{ SRC_DIR }}/napari/resources/icon.ico" "{{ PREFIX }}/Menu/napari.ico"
     requirements:
+      host:
+        - python {{ python_min }}
+        - pip
+        - setuptools >=69
+        - setuptools_scm >=8
       build:
         - sed     # [unix]
       run:
+        - python >={{ python_min }}
         - napari {{ version }}.*
     test:
       requires:
