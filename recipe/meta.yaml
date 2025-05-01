@@ -61,7 +61,8 @@ outputs:
         - psygnal >=0.5.0
         - pydantic >=2.2.0
         - pygments >=2.6.0
-        - pyopengl >=3.1.5
+        - pyopengl >=3.1.5  # [not linux]
+        - pyopengl >=3.1.5,!=3.1.7,!=3.1.9  # [linux]
         - python-dotenv >=0.21.0
         - pywin32 >=302  # [win]
         - pyyaml >=6.0
