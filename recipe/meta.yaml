@@ -1,5 +1,5 @@
 {% set name = "napari" %}
-{% set version = "0.5.6" %}
+{% set version = "0.6.0" %}
 
 package:
   name: napari-meta
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 22a8a565c4cc0628986bd31e73ba8253f04dae21a63cae52fc7d11c797706112
+    sha256: cb49ca31092d897c30186c037ae2bf4ab4500db3f66387014ec1058abbb0dfee
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
