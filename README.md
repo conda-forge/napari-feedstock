@@ -19,19 +19,6 @@ Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
 
-About napari-base
------------------
-
-Home: http://napari.org
-
-Package license: BSD-3-Clause AND MIT
-
-Summary: a fast n-dimensional image viewer in Python, with only the required dependencies
-
-Development: https://github.com/napari/napari
-
-Documentation: http://napari.org
-
 About napari
 ------------
 
@@ -46,6 +33,19 @@ Development: https://github.com/napari/napari
 Documentation: http://napari.org
 
 a fast n-dimensional image viewer in Python
+
+About napari-base
+-----------------
+
+Home: http://napari.org
+
+Package license: BSD-3-Clause AND MIT
+
+Summary: a fast n-dimensional image viewer in Python, with only the required dependencies
+
+Development: https://github.com/napari/napari
+
+Documentation: http://napari.org
 
 About napari-menu
 -----------------
