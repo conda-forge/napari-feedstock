@@ -14,7 +14,7 @@ source:
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari-base
@@ -62,7 +62,7 @@ outputs:
         - pydantic >=2.2.0
         - pygments >=2.6.0
         - pyopengl >=3.1.5  # [not linux]
-        - pyopengl >=3.1.5,!=3.1.7,!=3.1.9  # [linux]
+        - pyopengl >=3.1.5,!=3.1.7  # [linux]
         - python-dotenv >=0.21.0
         - pywin32 >=302  # [win]
         - pyyaml >=6.0
@@ -94,9 +94,11 @@ outputs:
       #   - pandas
       #   - pytest-timeout
         - python {{ python_min }}
+        - pip
       imports:
         - napari
       commands:
+        - pip check
         - setx QT_API "pyqt5"  # [win]
         - export QT_API=pyqt5  # [unix]
         - which napari
