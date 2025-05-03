@@ -49,6 +49,7 @@ outputs:
         - jsonschema >=3.2.0
         - lazy_loader >=0.2
         - magicgui >=0.7.0
+        - napari-svg >=0.1.8
         - napari-console >=0.1.1
         - napari-plugin-engine >=0.1.9
         - npe2 >=0.7.8
@@ -88,6 +89,7 @@ outputs:
     test:
       requires:
         - pyqt
+        - pip
       # needed if pytest is uncommented below in 'commands'
       #   - hypothesis
       #   - pytest
@@ -100,6 +102,7 @@ outputs:
       imports:
         - napari
       commands:
+        - pip check
         - setx QT_API "pyqt5"  # [win]
         - export QT_API=pyqt5  # [unix]
         - which napari
