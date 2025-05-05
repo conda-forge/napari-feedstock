@@ -7,8 +7,8 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 pari:
-- 2.15.* *_pthread
+- 2.17.* *_pthread
 pyqt:
 - '5.15'
 python_min:
-- '3.10'
+- '3.9'
