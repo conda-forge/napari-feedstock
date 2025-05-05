@@ -14,7 +14,7 @@ source:
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: napari-base
@@ -61,10 +61,10 @@ outputs:
         - psygnal >=0.5.0
         - pydantic >=2.2.0
         - pygments >=2.6.0
-        - pyopengl >=3.1.5  # [not linux]
-        - pyopengl >=3.1.5,!=3.1.7,!=3.1.9  # [linux]
+        - pyopengl >=3.1.5
         - python-dotenv >=0.21.0
-        - pywin32 >=302  # [win]
+        # only needed for windows, but helps keep the package noarch
+        - pywin32 >=302
         - pyyaml >=6.0
         - qtpy >=1.10.0
         - scikit-image >=0.19.1
