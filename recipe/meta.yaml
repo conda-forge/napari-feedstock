@@ -173,7 +173,7 @@ outputs:
         - sed     # [unix]
       run:
         - python >={{ python_min }}
-        - napari {{ version }}.*
+        - {{ pin_subpackage('napari', exact=True) }}
     test:
       requires:
         - python {{ python_min }}
