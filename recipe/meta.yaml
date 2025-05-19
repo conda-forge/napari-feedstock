@@ -211,6 +211,7 @@ about:
 extra:
   feedstock-name: napari
   recipe-maintainers:
+    - Czaki
     - jni
     - sofroniewn
     - kne42
