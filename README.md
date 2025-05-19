@@ -199,6 +199,7 @@ Feedstock Maintainers
 =====================
 
 * [@AhmetCanSolak](https://github.com/AhmetCanSolak/)
+* [@Czaki](https://github.com/Czaki/)
 * [@goanpeca](https://github.com/goanpeca/)
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
