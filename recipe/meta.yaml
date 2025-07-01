@@ -1,5 +1,5 @@
 {% set name = "napari" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 60854c95e03444756461eef4ade941c96ef4a3511e3bb14e5028bd501c1fb3cc
+    sha256: c74c0fbcf087faa524475d5ef6d16a0e0ed09a7ab4a3afaf45a8fddc93cf274d
   - url: https://raw.githubusercontent.com/napari/napari/v{{ version }}/resources/conda_menu_config.json
     folder: resources
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
@@ -35,7 +35,7 @@ outputs:
         - python >={{ python_min }}
 
         # dependencies matched to pyproject.toml
-        - app-model >=0.3.0,<0.4.0a
+        - app-model >=0.4.0,<0.5.0a
         - appdirs >=1.4.4
         - cachey >=0.2.1
         - certifi >=2018.1.18
@@ -47,7 +47,7 @@ outputs:
         - cytoolz >=0.11.0
         - imageio >=2.20,!=2.22.1
         - jsonschema >=3.2.0
-        - lazy_loader >=0.2
+        - lazy_loader >=0.3
         - magicgui >=0.7.0
         - napari-svg >=0.1.8
         - napari-console >=0.1.1
@@ -59,7 +59,7 @@ outputs:
         - pillow >=9.0
         - pint >=0.17
         - psutil >=5.9.0
-        - psygnal >=0.5.0
+        - psygnal >=0.10.0
         - pydantic >=2.2.0
         - pygments >=2.6.0
         - pyopengl >=3.1.5
@@ -70,12 +70,12 @@ outputs:
         - qtpy >=1.10.0
         - scikit-image >=0.19.1
         - scipy >=1.10.1
-        - superqt >=0.6.7
+        - superqt >=0.7.3
         - tifffile >=2022.7.28
         - toolz >=0.11.0
         - tqdm >=4.56.0
-        - typing_extensions >=4.6.1
-        - vispy >=0.15.0,<0.16.0a0
+        - typing_extensions >=4.12
+        - vispy >=0.15.2,<0.16.0a0
         - wrapt >=1.13.3
 
       run_constrained:
@@ -112,8 +112,8 @@ outputs:
       license: BSD-3-Clause AND MIT
       license_file:
         - LICENSE
-        - napari/_vendor/darkdetect/LICENSE
-        - napari/_vendor/qt_json_builder/LICENSE
+        - src/napari/_vendor/darkdetect/LICENSE
+        - src/napari/_vendor/qt_json_builder/LICENSE
       summary: a fast n-dimensional image viewer in Python, with only the required dependencies
       doc_url: http://napari.org
       dev_url: https://github.com/napari/napari
@@ -131,6 +131,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('napari-base', exact=True) }}
+        - bermuda >=0.1.5
         - fsspec
         - napari-plugin-manager >=0.1.3,<0.2.0a0
         - napari-svg >=0.1.8
@@ -160,9 +161,9 @@ outputs:
       script:
         - mkdir -p "${PREFIX}/Menu"
         - sed "s/__PKG_VERSION__/{{ PKG_VERSION }}/" "{{ SRC_DIR }}/resources/conda_menu_config.json" > "{{ PREFIX }}/Menu/napari-menu.json"
-        - cp "{{ SRC_DIR }}/napari/resources/logo.png" "{{ PREFIX }}/Menu/napari.png"
-        - cp "{{ SRC_DIR }}/napari/resources/icon.icns" "{{ PREFIX }}/Menu/napari.icns"
-        - cp "{{ SRC_DIR }}/napari/resources/icon.ico" "{{ PREFIX }}/Menu/napari.ico"
+        - cp "{{ SRC_DIR }}/src/napari/resources/logo.png" "{{ PREFIX }}/Menu/napari.png"
+        - cp "{{ SRC_DIR }}/src/napari/resources/icon.icns" "{{ PREFIX }}/Menu/napari.icns"
+        - cp "{{ SRC_DIR }}/src/napari/resources/icon.ico" "{{ PREFIX }}/Menu/napari.ico"
     requirements:
       host:
         - python {{ python_min }}
