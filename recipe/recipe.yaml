@@ -65,7 +65,6 @@ outputs:
         - pydantic >=2.2.0
         - pygments >=2.6.0
         - pyopengl >=3.1.5
-        - python-dotenv >=0.21.0
         - pywin32 >=302 # only needed for windows, but helps keep the package noarch
         - pyyaml >=6.0
         - qtpy >=1.10.0
