@@ -7,37 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-feedstoc
 About napari
 ------------
 
-Home: http://napari.org
-
-Package license: BSD-3-Clause
-
-Summary: a fast n-dimensional image viewer in Python
-
-Development: https://github.com/napari/napari
-
-Documentation: http://napari.org
-
-a fast n-dimensional image viewer in Python
-
-About napari
-------------
-
-Home: http://napari.org
-
-Package license: BSD-3-Clause AND MIT
-
-Summary: a fast n-dimensional image viewer in Python
-
-Development: https://github.com/napari/napari
-
-Documentation: http://napari.org
-
-a fast n-dimensional image viewer in Python
-
-About napari-base
------------------
-
-Home: http://napari.org
+Home: http://napari.org/
 
 Package license: BSD-3-Clause AND MIT
 
@@ -45,22 +15,20 @@ Summary: a fast n-dimensional image viewer in Python, with only the required dep
 
 Development: https://github.com/napari/napari
 
-Documentation: http://napari.org
+Documentation: http://napari.org/
 
-About napari-menu
+About napari-base
 -----------------
 
-Home: http://napari.org
+Home: http://napari.org/
 
-Package license: BSD-3-Clause
+Package license: BSD-3-Clause AND MIT
 
-Summary: provides menu icons for napari
+Summary: a fast n-dimensional image viewer in Python, with only the required dependencies
 
 Development: https://github.com/napari/napari
 
-Documentation: http://napari.org
-
-provides menu icons for napari
+Documentation: http://napari.org/
 
 Current build status
 ====================
