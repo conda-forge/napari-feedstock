@@ -125,6 +125,8 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python ${{ python_min }}.*
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('napari-base', exact=True) }}
@@ -169,6 +171,8 @@ outputs:
             - sed
           else:
             - m2-sed
+      host:
+        - python ${{ python_min }}.*
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('napari', exact=True) }}
