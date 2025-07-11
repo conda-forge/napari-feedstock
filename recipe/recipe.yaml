@@ -45,15 +45,15 @@ outputs:
         # in the distributed dependency
         # conda-forge doesn't have the dask-array subpackage
         # so depend on cytoolz and numpy manually
-        - dask-core >=2021.10.0
         - cytoolz >=0.11.0
+        - dask-core >=2021.10.0
         - imageio >=2.20,!=2.22.1
         - jsonschema >=3.2.0
         - lazy_loader >=0.3
         - magicgui >=0.7.0
-        - napari-svg >=0.1.8
         - napari-console >=0.1.1
         - napari-plugin-engine >=0.1.9
+        - napari-svg >=0.1.8
         - npe2 >=0.7.8
         - numpy >=1.24.2
         - numpydoc >=1.0.0
@@ -66,8 +66,7 @@ outputs:
         - pygments >=2.6.0
         - pyopengl >=3.1.5
         - python-dotenv >=0.21.0
-        # only needed for windows, but helps keep the package noarch
-        - pywin32 >=302
+        - pywin32 >=302 # only needed for windows, but helps keep the package noarch
         - pyyaml >=6.0
         - qtpy >=1.10.0
         - scikit-image >=0.19.1
