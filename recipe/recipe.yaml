@@ -1,8 +1,8 @@
 context:
   name: napari
-  version: "0.6.2"
+  version: "0.6.3"
   python_min: "3.10"
-  build_number: 1
+  build_number: 0
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: c74c0fbcf087faa524475d5ef6d16a0e0ed09a7ab4a3afaf45a8fddc93cf274d
+    sha256: 9228359e84fd7d9c5e9bf5c511dd5a77ecb3e56a967d9cb8213188d151847180
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 3920b144d72e8af8fe0da3da679b2d39aa2d097c10a2c75a3b4e42ffcef17cac
@@ -25,7 +25,7 @@ outputs:
       noarch: python
       script: python -m pip install . -vv
       python:
-        entry_points: 
+        entry_points:
           - napari = napari.__main__:main
     requirements:
       host:
@@ -91,7 +91,7 @@ outputs:
           - ${{ 'setx QT_API pyqt5' if win else 'export QT_API=pyqt5' }}
           - ${{ 'where napari' if win else 'which napari' }}
           - if: linux
-            then: 
+            then:
               - 'QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
             else:
               - napari --info
