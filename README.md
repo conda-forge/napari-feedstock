@@ -179,15 +179,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@AhmetCanSolak](https://github.com/AhmetCanSolak/)
 * [@Czaki](https://github.com/Czaki/)
-* [@goanpeca](https://github.com/goanpeca/)
+* [@DragaDoncila](https://github.com/DragaDoncila/)
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
-* [@kne42](https://github.com/kne42/)
-* [@royerloic](https://github.com/royerloic/)
-* [@sofroniewn](https://github.com/sofroniewn/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@kephale](https://github.com/kephale/)
 
