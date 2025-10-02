@@ -201,6 +201,7 @@ about:
 extra:
   feedstock-name: napari
   recipe-maintainers:
+    - kephale
     - DragaDoncila
     - Czaki
     - jni
