@@ -177,7 +177,7 @@ outputs:
     tests:
       - requirements:
           run:
-            - python ${{ python_min }}
+            - python ${{ python_min }}.*
         script:
           - python -c "import napari"
       - package_contents:
