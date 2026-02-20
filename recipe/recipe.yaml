@@ -2,7 +2,7 @@ context:
   name: napari
   version: "0.6.6"
   python_min: "3.10"
-  build_number: 0
+  build_number: 1
 
 recipe:
   name: ${{ name|lower }}
@@ -177,7 +177,7 @@ outputs:
     tests:
       - requirements:
           run:
-            - python ${{ python_min }}
+            - python >=${{ python_min }}
         script:
           - python -c "import napari"
       - package_contents:
