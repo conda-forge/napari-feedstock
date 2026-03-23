@@ -172,12 +172,12 @@ outputs:
       host:
         - python ${{ python_min }}.*
       run:
-        - python ${{ python_min }}
+        - python >=${{ python_min }}
         - ${{ pin_subpackage('napari', exact=True) }}
     tests:
       - requirements:
           run:
-            - python >=${{ python_min }}.*
+            - python ${{ python_min }}.*
         script:
           - python -c "import napari"
       - package_contents:
