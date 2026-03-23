@@ -1,6 +1,6 @@
 context:
   name: napari
-  version: "0.6.6"
+  version: "0.7.0"
   python_min: "3.10"
   build_number: 1
 
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 8e1adfc737c55c2a619689fad8d9e4d115582e56f09096cf771816b0ec75c3a7
+    sha256: 9b36ee73bb3d56f34dd4c6486cc331ac5411d5f13f8bd2bc073ce177c48899b7
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 61a9907bb60eb07d5b00f27df709f8b790deb7f2247e46e9928ecd8b473d831f
