@@ -47,11 +47,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9160&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/napari-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
@@ -181,6 +180,7 @@ Feedstock Maintainers
 
 * [@Czaki](https://github.com/Czaki/)
 * [@DragaDoncila](https://github.com/DragaDoncila/)
+* [@brisvag](https://github.com/brisvag/)
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kephale](https://github.com/kephale/)
