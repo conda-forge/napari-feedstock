@@ -99,7 +99,7 @@ outputs:
           # - pytest --pyargs napari
         requirements:
           run:
-            - pyqt6
+            - pyqt
             # needed if pytest is uncommented above in 'script'
             #   - hypothesis
             #   - pytest
