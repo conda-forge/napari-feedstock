@@ -89,7 +89,7 @@ outputs:
             - napari
           python_version: ${{ python_min }}.*
       - script:
-          - ${{ 'setx QT_API pyqt6' if win else 'export QT_API=pyqt6' }}
+          - ${{ 'setx QT_API pyqt5' if win else 'export QT_API=pyqt5' }}
           - ${{ 'where napari' if win else 'which napari' }}
           - if: linux
             then:
