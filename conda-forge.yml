@@ -1,5 +1,5 @@
 conda_forge_output_validation: true
-azure:
+workflow_settings:
   store_build_artifacts: true
 github:
   branch_name: main

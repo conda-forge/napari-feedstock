@@ -1,8 +1,8 @@
 context:
   name: napari
-  version: "0.7.0"
+  version: "0.7.1"
   python_min: "3.10"
-  build_number: 1
+  build_number: 0
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 9b36ee73bb3d56f34dd4c6486cc331ac5411d5f13f8bd2bc073ce177c48899b7
+    sha256: 275a74dfa4a1a55a350f7ba9c40d7bf4216d3ce463ebb204e9bdaa561e3da874
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 61a9907bb60eb07d5b00f27df709f8b790deb7f2247e46e9928ecd8b473d831f
@@ -38,7 +38,6 @@ outputs:
 
         # dependencies matched to pyproject.toml
         - app-model >=0.5.0,<0.6.0a
-        - appdirs >=1.4.4
         - cachey >=0.2.1
         - certifi >=2018.1.18
         # Do not depend on base "dask" package since it pulls
@@ -60,6 +59,7 @@ outputs:
         - pandas >=1.3.3
         - pillow >=10.0
         - pint >=0.17
+        - platformdirs >=4.3.0
         - psutil >=5.9.0
         - psygnal >=0.14.2
         - pydantic >=2.8.0
@@ -77,12 +77,12 @@ outputs:
         - toolz >=0.11.0
         - tqdm >=4.56.0
         - typing_extensions >=4.12
-        - vispy >=0.16.1,<0.17.0a0
+        - vispy >=0.16.2,<0.17.0a0
         - wrapt >=1.13.3
       run_constraints:
-        - pyside6 >=6.7.1
+        - pyside6 >=6.7.1,<6.11
         - pyqt >=5.15.8,<6.0a0
-        - pyqt6 >=6.5,!=6.6.1
+        - pyqt6 >=6.5,!=6.6.1,<6.11
     tests:
       - python:
           pip_check: true
@@ -94,7 +94,7 @@ outputs:
           - ${{ 'where napari' if win else 'which napari' }}
           - if: linux
             then:
-              - 'QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
+              'QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
             else:
               - napari --info
           # - pytest --pyargs napari
@@ -161,7 +161,7 @@ outputs:
       script:
         - mkdir -p "${{ PREFIX }}/Menu"
         - sed "s/__PKG_VERSION__/${{ PKG_VERSION }}/" "${{ SRC_DIR }}/resources/conda_menu_config.json" > "${{ PREFIX }}/Menu/napari-menu.json"
-        - |  
+        - |
           # Download and extract icons from latest napari/resources release
           mkdir -p /tmp/napari-icons
           curl -sL https://github.com/napari/resources/releases/latest/download/icons.tar.gz | tar xz -C /tmp/napari-icons
