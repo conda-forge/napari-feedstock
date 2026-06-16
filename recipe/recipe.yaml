@@ -1,8 +1,8 @@
 context:
   name: napari
-  version: "0.7.0"
+  version: "0.7.1"
   python_min: "3.10"
-  build_number: 1
+  build_number: 0
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 9b36ee73bb3d56f34dd4c6486cc331ac5411d5f13f8bd2bc073ce177c48899b7
+    sha256: 275a74dfa4a1a55a350f7ba9c40d7bf4216d3ce463ebb204e9bdaa561e3da874
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 61a9907bb60eb07d5b00f27df709f8b790deb7f2247e46e9928ecd8b473d831f
@@ -161,7 +161,7 @@ outputs:
       script:
         - mkdir -p "${{ PREFIX }}/Menu"
         - sed "s/__PKG_VERSION__/${{ PKG_VERSION }}/" "${{ SRC_DIR }}/resources/conda_menu_config.json" > "${{ PREFIX }}/Menu/napari-menu.json"
-        - |  
+        - |
           # Download and extract icons from latest napari/resources release
           mkdir -p /tmp/napari-icons
           curl -sL https://github.com/napari/resources/releases/latest/download/icons.tar.gz | tar xz -C /tmp/napari-icons
