@@ -4,3 +4,4 @@ libXrender
 mesa-dri-drivers
 dbus-libs
 libxkbcommon-x11
+xcb-util-cursor
