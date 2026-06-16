@@ -94,7 +94,9 @@ outputs:
           - ${{ 'where napari' if win else 'which napari' }}
           - if: linux
             then:
-              - 'QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose LIBGL_ALWAYS_SOFTWARE=1 QT_OPENGL=software QT_QUICK_BACKEND=software xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
+              - 'python -c "import os, subprocess; from PyQt6.QtCore import QLibraryInfo; p=QLibraryInfo.path(QLibraryInfo.LibraryPath.PluginsPath); xcb=os.path.join(p, \"platforms\", \"libqxcb.so\"); print(\"Qt plugins path:\", p); print(\"Qt xcb plugin:\", xcb); subprocess.run([\"ldd\", xcb], check=False)"'
+              - 'QT_QPA_PLATFORM=xcb LIBGL_ALWAYS_SOFTWARE=1 xvfb-run --auto-servernum python -c "from PyQt6.QtWidgets import QApplication; app=QApplication([]); print(\"PyQt6 QApplication ok\")"'
+              - 'QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose LIBGL_ALWAYS_SOFTWARE=1 QT_OPENGL=software QT_QUICK_BACKEND=software QT_QPA_PLATFORM=xcb xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
             else:
               - napari --info
           # - pytest --pyargs napari
