@@ -1,7 +1,7 @@
 context:
   name: napari
-  version: "0.7.1"
-  python_min: "3.10"
+  version: "0.8.0"
+  python_min: "3.11"
   build_number: 1
 
 recipe:
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 275a74dfa4a1a55a350f7ba9c40d7bf4216d3ce463ebb204e9bdaa561e3da874
+    sha256: 607bd31e7894080b8f271ee69936d58eea73b26db55d0f0bac1cf4b48dbd9de5
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 61a9907bb60eb07d5b00f27df709f8b790deb7f2247e46e9928ecd8b473d831f
@@ -45,7 +45,7 @@ outputs:
         # conda-forge doesn't have the dask-array subpackage
         # so depend on cytoolz and numpy manually
         - cytoolz >=0.11.0
-        - dask-core >=2021.10.0
+        - dask-core >=2022.1.1
         - imageio >=2.20,!=2.22.1
         - jsonschema >=3.2.0
         - lazy_loader >=0.3
@@ -54,31 +54,30 @@ outputs:
         - napari-plugin-engine >=0.2.1
         - napari-svg >=0.1.8
         - npe2 >=0.8.1
-        - numpy >=1.24.2
-        - numpydoc >=1.0.0
-        - pandas >=1.3.3
+        - numpy >=1.25.0
+        - pandas >=1.5.0
         - pillow >=10.0
         - pint >=0.17
         - platformdirs >=4.3.0
         - psutil >=5.9.0
         - psygnal >=0.14.2
         - pydantic >=2.8.0
+        - pygments >=2.13.0
         - pydantic-extra-types
         - pydantic-settings
-        - pygments >=2.13.0
         - pyopengl >=3.1.10
         - pywin32 >=302 # only needed for windows, but helps keep the package noarch
         - pyyaml >=6.0
         - qtpy >=2.4.0
-        - scikit-image >=0.19.1
+        - scikit-image >=0.20.0
         - scipy >=1.14.0
         - superqt >=0.7.8
         - tifffile >=2022.7.28
-        - toolz >=0.11.0
+        - toolz >=0.12.1
         - tqdm >=4.56.0
         - typing_extensions >=4.12
         - vispy >=0.16.2,<0.17.0a0
-        - wrapt >=1.13.3
+        - wrapt >=1.14.1
       run_constraints:
         - pyside6 >=6.7.1,<6.11
         - pyqt >=5.15.8,<6.0a0
@@ -115,7 +114,6 @@ outputs:
       license: BSD-3-Clause AND MIT
       license_file:
         - LICENSE
-        - src/napari/_vendor/darkdetect/LICENSE
         - src/napari/_vendor/qt_json_builder/LICENSE
       documentation: http://napari.org
       repository: https://github.com/napari/napari
@@ -130,14 +128,15 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('napari-base', exact=True) }}
+        - aiohttp  # needed to open remote files by zarr
         - bermuda >=0.1.5
         - fsspec
         - napari-metadata >=0.1.1
         - napari-plugin-manager >=0.1.10,<0.2.0a0
-        - numba >=0.57.1
+        - numba >=0.58.0
         - partsegcore-compiled-backend >=0.15.11
         - pooch >=1.6.0
-        - zarr >=2.12.0
+        - zarr >=3.0.8
     tests:  # just to check that the environment can indeed solve
       - requirements:
           run:
