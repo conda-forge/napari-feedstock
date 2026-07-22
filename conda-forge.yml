@@ -8,3 +8,5 @@ conda_build:
   pkg_format: '2'
 conda_install_tool: pixi
 conda_build_tool: rattler-build
+os_version:
+  linux_64: alma9
