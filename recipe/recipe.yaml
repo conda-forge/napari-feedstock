@@ -2,7 +2,7 @@ context:
   name: napari
   version: "0.8.0"
   python_min: "3.11"
-  build_number: 1
+  build_number: 2
 
 recipe:
   name: ${{ name|lower }}
@@ -87,7 +87,10 @@ outputs:
           pip_check: true
           imports:
             - napari
-          python_version: ${{ python_min }}.*
+          python_version: 
+            - ${{ python_min }}.*
+            - "*"
+
       - script:
           - ${{ 'setx QT_API pyqt6' if win else 'export QT_API=pyqt6' }}
           - ${{ 'where napari' if win else 'which napari' }}
