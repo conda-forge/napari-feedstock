@@ -76,31 +76,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `napari, napari-base, napari-menu` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install napari napari-base napari-menu
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install napari napari-base napari-menu
 ```
 
-It is possible to list all of the versions of `napari` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add napari napari-base napari-menu
+# for installing globally
+pixi global install napari napari-base napari-menu
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `napari` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search napari --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search napari --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search napari --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -112,6 +154,8 @@ mamba repoquery whoneeds napari --channel conda-forge
 # List dependencies of `napari`:
 mamba repoquery depends napari --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -186,7 +230,4 @@ Feedstock Maintainers
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kephale](https://github.com/kephale/)
-
-
-<!-- dummy commit to enable rerendering -->
 
