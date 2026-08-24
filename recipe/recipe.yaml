@@ -210,6 +210,7 @@ about:
 extra:
   feedstock-name: napari
   recipe-maintainers:
+    - TimMonko
     - brisvag
     - kephale
     - DragaDoncila
