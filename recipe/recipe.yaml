@@ -1,8 +1,8 @@
 context:
   name: napari
-  version: "0.8.0"
+  version: "0.9.0"
   python_min: "3.11"
-  build_number: 3
+  build_number: 0
 
 recipe:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-    sha256: 607bd31e7894080b8f271ee69936d58eea73b26db55d0f0bac1cf4b48dbd9de5
+    sha256: 697a24165f918e09bf03c31ccddaaf38114d73cb1474cd179ef19d26f88ddeb5
   - url: https://raw.githubusercontent.com/napari/napari/v${{ version }}/resources/conda_menu_config.json
     target_directory: resources
     sha256: 61a9907bb60eb07d5b00f27df709f8b790deb7f2247e46e9928ecd8b473d831f
@@ -87,7 +87,7 @@ outputs:
           pip_check: true
           imports:
             - napari
-          python_version: 
+          python_version:
             - ${{ python_min }}.*
             - "*"
 
@@ -95,8 +95,7 @@ outputs:
           - ${{ 'setx QT_API pyqt6' if win else 'export QT_API=pyqt6' }}
           - ${{ 'where napari' if win else 'which napari' }}
           - if: linux
-            then:
-              'QT_XCB_GL_INTEGRATION=none QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
+            then: 'QT_XCB_GL_INTEGRATION=none QT_DEBUG_PLUGINS=1 LIBGL_DEBUG=verbose xvfb-run --auto-servernum napari --info | grep -C99 "napari: ${PKG_VERSION}"'
             else:
               - napari --info
           # - pytest --pyargs napari
