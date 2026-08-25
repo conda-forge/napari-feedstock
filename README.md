@@ -226,11 +226,9 @@ Feedstock Maintainers
 
 * [@Czaki](https://github.com/Czaki/)
 * [@DragaDoncila](https://github.com/DragaDoncila/)
+* [@TimMonko](https://github.com/TimMonko/)
 * [@brisvag](https://github.com/brisvag/)
 * [@jaimergp](https://github.com/jaimergp/)
 * [@jni](https://github.com/jni/)
 * [@kephale](https://github.com/kephale/)
-
-
-<!-- dummy commit to enable rerendering -->
 
